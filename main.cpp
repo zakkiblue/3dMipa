@@ -13,6 +13,7 @@ void keyboard(unsigned char, int, int);
 void resize(int, int);
 void draw_star(float,float);
 void house(float,float,float);
+void house_side(float,float,float);
 void apart(float,float,float);
 void circle1(float);
 void stand(float ,float ,float );
@@ -353,16 +354,131 @@ glColor3f(0.0,0.1,0.0);
 	glEnd(); */
 }
 
+void house_side(float x,float y,float z)
+{
+    //satu
+	glColor3f(0.1,0.1,0.1);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y,z);
+	glVertex3f(x,y,z+30);
+	glVertex3f(x,y+45,z+30);
+	glVertex3f(x,y+45,z);
+	glEnd();
+
+    //dua
+	glColor3f(0.01,0.05,0.3);
+	glBegin(GL_POLYGON);
+	glVertex3f(x-30,y,z);
+	glVertex3f(x-30,y+45,z);
+	glVertex3f(x-30,y+45,z+30);
+	glVertex3f(x-30,y,z+30);
+	glEnd();
+
+	glColor3f(0.01,0.05,0.3);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y,z+30);
+	glVertex3f(x-30,y,z+30);
+	glVertex3f(x-30,y+45,z+30);
+	glVertex3f(x,y+45,z+30);
+	glEnd();
+
+    //empat
+	glColor3f(0.01,0.05,0.3);
+	glBegin(GL_POLYGON);
+	glVertex3f(x-30,y,z);
+	glVertex3f(x-30,y+45,z);
+	glVertex3f(x,y+45,z);
+	glVertex3f(x,y,z);
+	glEnd();
+
+	glColor3f(1.0,1.0,1.0);
+	glBegin(GL_POLYGON);
+	glVertex3f(x-30,y,z);
+	glVertex3f(x,y,z);
+	glVertex3f(x,y,z+30);
+	glVertex3f(x-30,y,z+30);
+	glEnd();
+
+
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x+1.69*3,y+3.5*3,z);
+	glVertex3f(x-2.5*3,y+7.5*3,z);
+	glVertex3f(x-2.5*3,y+7.5*3,z+30);
+	glVertex3f(x+1.69*3,y+3.5*3,z+30);
+	glEnd();
+
+
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(z,y+3.5*3,x-6.69*3);
+	glVertex3f(z-20,y+3.5*3,x-6.69*3);
+	glVertex3f(z-20,y+7.5*3,x-1*3);
+	glVertex3f(z,y+7.5*3,x-1*3);
+	glEnd();
+
+    //atap 2
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x+1.69*3,y+15+3.5*3,z);
+	glVertex3f(x-2.5*3,y+15+7.5*3,z);
+	glVertex3f(x-2.5*3,y+15+7.5*3,z+30);
+	glVertex3f(x+1.69*3,y+15+3.5*3,z+30);
+	glEnd();
+
+
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x-6.69*3,y+15+3.5*3,z);
+	glVertex3f(x-6.69*3,y+15+3.5*3,z+30);
+	glVertex3f(x-2.5*3,y+15+7.5*3,z+30);
+	glVertex3f(x-2.5*3,y+15+7.5*3,z);
+	glEnd();
+
+	//atap 3
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x+1.69*3,y+30+3.5*3,z);
+	glVertex3f(x-2.5*3,y+30+7.5*3,z);
+	glVertex3f(x-2.5*3,y+30+7.5*3,z+30);
+	glVertex3f(x+1.69*3,y+30+3.5*3,z+30);
+	glEnd();
+
+
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x-6.69*3,y+30+3.5*3,z);
+	glVertex3f(x-6.69*3,y+30+3.5*3,z+30);
+	glVertex3f(x-2.5*3,y+30+7.5*3,z+30);
+	glVertex3f(x-2.5*3,y+30+7.5*3,z);
+	glRotated(90,0,1,0);
+	glEnd();
+
+
+//glColor3f(0.1,0.015,0.13);
+/*	glBegin(GL_POLYGON);
+	glVertex3f(x,y+15,z);
+	glVertex3f(x-15,y+5,z);
+	glVertex3f(x-2.5*3,y+7.5*3,z);
+	glEnd();
+
+glColor3f(0.0,0.1,0.0);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y+15,z+30);
+	glVertex3f(x-15,y+15,z+30);
+	glVertex3f(x-2.5*3,y+7.5*3,z+30);
+	glEnd(); */
+}
+
 
 void house1()
 {
 
 	house(120,0.1,50);
-	glTranslatef(-15,24,50);
-	glFlush();
-	glPopMatrix();
-
-	house(120,0.1,90);
+	//glTranslatef(-15,24,50);
+	//glFlush();
+	//glPopMatrix();
+	house(120,0.1,-90);
 
 	house(160,0.1,90);
 
@@ -385,7 +501,7 @@ void house1()
     //stand(-10,6,130);
     //stand(30,6,130);
 
-    house(-60,0.1,160);
+    house_side(-60,0.1,-60);
 
 
 }
@@ -421,8 +537,8 @@ glEnd();
 
 void init(void)
 {
-		glClearColor(0.0,0.0,0.0,0.0);
-glEnable(GL_DEPTH_TEST);
+    glClearColor(1.0,1.0,1.0,1.0);
+    glEnable(GL_DEPTH_TEST);
 	glMatrixMode(GL_MODELVIEW);
 }
 
@@ -502,19 +618,24 @@ void display(void)
 {
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	/* draw the floor */
+	glPushMatrix();
+     glColor3f(0, 1, 0);
+     //glTranslatef(cx, cy, cz);
+     glutSolidCube(0.4);
+     glPopMatrix();
 	glBegin(GL_QUADS);
 	glColor3f(0.8,0.6,0.4);
-        glVertex3f(-200.0, 0.0, -200.0);
-			glColor3f(0.8,0.6,0.4);
-glVertex3f(-200.0, 0.0, 200.0);
+    glVertex3f(-200.0, 0.0, -200.0);
+    glColor3f(0.8,0.6,0.4);
+    glVertex3f(-200.0, 0.0, 200.0);
 	glColor3f(0.8,0.6,0.4);
-		glVertex3f(200.0, 0.0, 200.0);
+    glVertex3f(200.0, 0.0, 200.0);
 	glColor3f(0.8,0.6,0.4);
-		glVertex3f(200.0, 0.0, -200.0);
+    glVertex3f(200.0, 0.0, -200.0);
 	glEnd();
 
 	glFlush();
-
+    draw_star(0,220);
     /*draw_star(20,240);
     draw_star(180,220);
     draw_star(-30,280);
@@ -754,7 +875,7 @@ void resize(int width, int height)
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 
-gluPerspective(80.0, width / height, 1.0, 600.0);
+    gluPerspective(80.0, width / height, 1.0, 600.0);
 
 	glTranslatef(0.0, -15.0, -320.0);
 
