@@ -399,7 +399,7 @@ void house_side(float x,float y,float z)
 	glVertex3f(x-30,y,z+15);
 	glEnd();
 
-
+//atap 1
 	glColor3f(0.51,0.015,0.008);
 	glBegin(GL_POLYGON);
 	glVertex3f(x,y+3.5*3,z+15+1.69*3);
@@ -416,44 +416,42 @@ void house_side(float x,float y,float z)
 	glVertex3f(x-30,y+7.5*3,z+15-2.5*3);
 	glVertex3f(x-30,y+3.5*3,z-1.69*3);
 	glEnd();
+
+//atap2
+glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y+15+3.5*3,z+15+1.69*3);
+	glVertex3f(x,y+15+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+15+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+15+3.5*3,z+15+1.69*3);
+	glEnd();
+
+
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y+15+3.5*3,z-1.69*3);
+	glVertex3f(x,y+15+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+15+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+15+3.5*3,z-1.69*3);
+	glEnd();
+//atap3
+glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y+30+3.5*3,z+15+1.69*3);
+	glVertex3f(x,y+30+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+30+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+30+3.5*3,z+15+1.69*3);
+	glEnd();
+
+
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y+30+3.5*3,z-1.69*3);
+	glVertex3f(x,y+30+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+30+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+30+3.5*3,z-1.69*3);
+	glEnd();
 /*
-    //atap 2
-	glColor3f(0.51,0.015,0.008);
-	glBegin(GL_POLYGON);
-	glVertex3f(x+1.69*3,y+15+3.5*3,z);
-	glVertex3f(x-2.5*3,y+15+7.5*3,z);
-	glVertex3f(x-2.5*3,y+15+7.5*3,z+30);
-	glVertex3f(x+1.69*3,y+15+3.5*3,z+30);
-	glEnd();
-
-
-	glColor3f(0.51,0.015,0.008);
-	glBegin(GL_POLYGON);
-	glVertex3f(x-6.69*3,y+15+3.5*3,z);
-	glVertex3f(x-6.69*3,y+15+3.5*3,z+30);
-	glVertex3f(x-2.5*3,y+15+7.5*3,z+30);
-	glVertex3f(x-2.5*3,y+15+7.5*3,z);
-	glEnd();
-
-	//atap 3
-	glColor3f(0.51,0.015,0.008);
-	glBegin(GL_POLYGON);
-	glVertex3f(x+1.69*3,y+30+3.5*3,z);
-	glVertex3f(x-2.5*3,y+30+7.5*3,z);
-	glVertex3f(x-2.5*3,y+30+7.5*3,z+30);
-	glVertex3f(x+1.69*3,y+30+3.5*3,z+30);
-	glEnd();
-
-
-	glColor3f(0.51,0.015,0.008);
-	glBegin(GL_POLYGON);
-	glVertex3f(x-6.69*3,y+30+3.5*3,z);
-	glVertex3f(x-6.69*3,y+30+3.5*3,z+30);
-	glVertex3f(x-2.5*3,y+30+7.5*3,z+30);
-	glVertex3f(x-2.5*3,y+30+7.5*3,z);
-	glRotated(90,0,1,0);
-	glEnd(); */
-
 
 //glColor3f(0.1,0.015,0.13);
 /*	glBegin(GL_POLYGON);
@@ -475,9 +473,6 @@ void house1()
 {
 
 	house(120,0.1,50);
-	//glTranslatef(-15,24,50);
-	//glFlush();
-	//glPopMatrix();
 	house(120,0.1,-90);
 
 	house(160,0.1,90);
