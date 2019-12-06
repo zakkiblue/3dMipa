@@ -360,8 +360,8 @@ void house_side(float x,float y,float z)
 	glColor3f(0.1,0.1,0.1);
 	glBegin(GL_POLYGON);
 	glVertex3f(x,y,z);
-	glVertex3f(x,y,z+30);
-	glVertex3f(x,y+45,z+30);
+	glVertex3f(x,y,z+15);
+	glVertex3f(x,y+45,z+15);
 	glVertex3f(x,y+45,z);
 	glEnd();
 
@@ -370,19 +370,19 @@ void house_side(float x,float y,float z)
 	glBegin(GL_POLYGON);
 	glVertex3f(x-30,y,z);
 	glVertex3f(x-30,y+45,z);
-	glVertex3f(x-30,y+45,z+30);
-	glVertex3f(x-30,y,z+30);
+	glVertex3f(x-30,y+45,z+15);
+	glVertex3f(x-30,y,z+15);
 	glEnd();
 
 	glColor3f(0.01,0.05,0.3);
 	glBegin(GL_POLYGON);
-	glVertex3f(x,y,z+30);
-	glVertex3f(x-30,y,z+30);
-	glVertex3f(x-30,y+45,z+30);
-	glVertex3f(x,y+45,z+30);
+	glVertex3f(x,y,z+15);
+	glVertex3f(x-30,y,z+15);
+	glVertex3f(x-30,y+45,z+15);
+	glVertex3f(x,y+45,z+15);
 	glEnd();
 
-    //empat
+   //empat
 	glColor3f(0.01,0.05,0.3);
 	glBegin(GL_POLYGON);
 	glVertex3f(x-30,y,z);
@@ -395,20 +395,20 @@ void house_side(float x,float y,float z)
 	glBegin(GL_POLYGON);
 	glVertex3f(x-30,y,z);
 	glVertex3f(x,y,z);
-	glVertex3f(x,y,z+30);
-	glVertex3f(x-30,y,z+30);
+	glVertex3f(x,y,z+15);
+	glVertex3f(x-30,y,z+15);
 	glEnd();
 
 
 	glColor3f(0.51,0.015,0.008);
 	glBegin(GL_POLYGON);
-	glVertex3f(x+1.69*3,y+3.5*3,z);
-	glVertex3f(x-2.5*3,y+7.5*3,z);
-	glVertex3f(x-2.5*3,y+7.5*3,z+30);
-	glVertex3f(x+1.69*3,y+3.5*3,z+30);
+	glVertex3f(x,y+3.5*3,z+15+1.69*3);
+	glVertex3f(x,y+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+3.5*3,z+15+1.69*3);
 	glEnd();
 
-
+/*
 	glColor3f(0.51,0.015,0.008);
 	glBegin(GL_POLYGON);
 	glVertex3f(z,y+3.5*3,x-6.69*3);
@@ -452,7 +452,7 @@ void house_side(float x,float y,float z)
 	glVertex3f(x-2.5*3,y+30+7.5*3,z+30);
 	glVertex3f(x-2.5*3,y+30+7.5*3,z);
 	glRotated(90,0,1,0);
-	glEnd();
+	glEnd(); */
 
 
 //glColor3f(0.1,0.015,0.13);
