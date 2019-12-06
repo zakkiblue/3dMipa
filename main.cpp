@@ -241,7 +241,7 @@ glBegin(GL_POLYGON);
 void house(float x,float y,float z)
 {
     //satu
-	glColor3f(0.1,0.1,0.1);
+	glColor3f(1.0,0.9,0.68);
 	glBegin(GL_POLYGON);
 	glVertex3f(x,y,z);
 	glVertex3f(x,y,z+30);
@@ -250,7 +250,7 @@ void house(float x,float y,float z)
 	glEnd();
 
     //dua
-	glColor3f(0.01,0.05,0.3);
+	glColor3f(1.0,0.9,0.68);
 	glBegin(GL_POLYGON);
 	glVertex3f(x-15,y,z);
 	glVertex3f(x-15,y+45,z);
@@ -258,7 +258,7 @@ void house(float x,float y,float z)
 	glVertex3f(x-15,y,z+30);
 	glEnd();
 
-	glColor3f(0.01,0.05,0.3);
+	glColor3f(1.0,0.9,0.68);
 	glBegin(GL_POLYGON);
 	glVertex3f(x,y,z+30);
 	glVertex3f(x-15,y,z+30);
@@ -267,7 +267,7 @@ void house(float x,float y,float z)
 	glEnd();
 
     //empat
-	glColor3f(0.01,0.05,0.3);
+	glColor3f(1.0,0.9,0.68);
 	glBegin(GL_POLYGON);
 	glVertex3f(x-15,y,z);
 	glVertex3f(x-15,y+45,z);
@@ -352,6 +352,71 @@ glColor3f(0.0,0.1,0.0);
 	glVertex3f(x-15,y+15,z+30);
 	glVertex3f(x-2.5*3,y+7.5*3,z+30);
 	glEnd(); */
+}
+void house_kecil(float x,float y,float z)
+{
+    //satu
+	glColor3f(1.0,0.9,0.68);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y,z);
+	glVertex3f(x,y,z+15);
+	glVertex3f(x,y+15,z+15);
+	glVertex3f(x,y+15,z);
+	glEnd();
+
+    //dua
+	glColor3f(1.0,0.9,0.68);
+	glBegin(GL_POLYGON);
+	glVertex3f(x-15,y,z);
+	glVertex3f(x-15,y+15,z);
+	glVertex3f(x-15,y+15,z+15);
+	glVertex3f(x-15,y,z+15);
+	glEnd();
+
+	glColor3f(1.0,0.9,0.68);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y,z+15);
+	glVertex3f(x-15,y,z+15);
+	glVertex3f(x-15,y+15,z+15);
+	glVertex3f(x,y+15,z+15);
+	glEnd();
+
+   //empat
+	glColor3f(1.0,0.9,0.68);
+	glBegin(GL_POLYGON);
+	glVertex3f(x-15,y,z);
+	glVertex3f(x-15,y+15,z);
+	glVertex3f(x,y+15,z);
+	glVertex3f(x,y,z);
+	glEnd();
+
+	glColor3f(1.0,1.0,1.0);
+	glBegin(GL_POLYGON);
+	glVertex3f(x-15,y,z);
+	glVertex3f(x,y,z);
+	glVertex3f(x,y,z+15);
+	glVertex3f(x-15,y,z+15);
+	glEnd();
+
+//atap 1
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y+3.5*3,z+15+1.69*3);
+	glVertex3f(x,y+7.5*3,z+15-2.5*3);
+	glVertex3f(x-15,y+7.5*3,z+15-2.5*3);
+	glVertex3f(x-15,y+3.5*3,z+15+1.69*3);
+	glEnd();
+
+
+	glColor3f(0.51,0.015,0.008);
+	glBegin(GL_POLYGON);
+	glVertex3f(x,y+3.5*3,z-1.69*3);
+	glVertex3f(x,y+7.5*3,z+15-2.5*3);
+	glVertex3f(x-15,y+7.5*3,z+15-2.5*3);
+	glVertex3f(x-15,y+3.5*3,z-1.69*3);
+	glEnd();
+
+
 }
 
 void house_side(float x,float y,float z)
@@ -473,36 +538,17 @@ void house1()
 {
     //perintah mencetak gedung posisikan yg sesuai yaa
 /*
-	house(120,0.1,50);
-	house(120,0.1,-90);
-
-	house(160,0.1,90);
-
-	house(80,0.1,90);
-
-	house(160,0.1,50);
-
-    house(80,0.1,50);
-
-    house(-130,0.1,120);
-
-    house(-130,0.1,160);
-
-    //house(-90,0.1,120);
-
-	house(-60,0.1,120);
-
-    //house(-90,0.1,160);
 
     //stand(-10,6,130);
     //stand(30,6,130);
     */
 
-    house_side(-60,0.1,-60);
-    house_side(-60,0.1,-30);
-
-    house_side(-60,0.1,0);
     house_side(-60,0.1,-90);
+    house_side(-60,0.1,-60);
+
+    house_side(-60,0.1,-30);
+    house_side(-60,0.1,0);
+    house_kecil(-30,0.1,-15);
 
     house(30,0.1,30);
     house(60,0.1,30);
