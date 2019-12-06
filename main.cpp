@@ -357,7 +357,7 @@ glColor3f(0.0,0.1,0.0);
 void house_side(float x,float y,float z)
 {
     //satu
-	glColor3f(0.1,0.1,0.1);
+	glColor3f(1.0,0.9,0.68);
 	glBegin(GL_POLYGON);
 	glVertex3f(x,y,z);
 	glVertex3f(x,y,z+15);
@@ -366,7 +366,7 @@ void house_side(float x,float y,float z)
 	glEnd();
 
     //dua
-	glColor3f(0.01,0.05,0.3);
+	glColor3f(1.0,0.9,0.68);
 	glBegin(GL_POLYGON);
 	glVertex3f(x-30,y,z);
 	glVertex3f(x-30,y+45,z);
@@ -374,7 +374,7 @@ void house_side(float x,float y,float z)
 	glVertex3f(x-30,y,z+15);
 	glEnd();
 
-	glColor3f(0.01,0.05,0.3);
+	glColor3f(1.0,0.9,0.68);
 	glBegin(GL_POLYGON);
 	glVertex3f(x,y,z+15);
 	glVertex3f(x-30,y,z+15);
@@ -383,7 +383,7 @@ void house_side(float x,float y,float z)
 	glEnd();
 
    //empat
-	glColor3f(0.01,0.05,0.3);
+	glColor3f(1.0,0.9,0.68);
 	glBegin(GL_POLYGON);
 	glVertex3f(x-30,y,z);
 	glVertex3f(x-30,y+45,z);
@@ -471,7 +471,8 @@ glColor3f(0.0,0.1,0.0);
 
 void house1()
 {
-
+    //perintah mencetak gedung posisikan yg sesuai yaa
+/*
 	house(120,0.1,50);
 	house(120,0.1,-90);
 
@@ -495,8 +496,21 @@ void house1()
 
     //stand(-10,6,130);
     //stand(30,6,130);
+    */
 
     house_side(-60,0.1,-60);
+    house_side(-60,0.1,-30);
+
+    house_side(-60,0.1,0);
+    house_side(-60,0.1,-90);
+
+    house(30,0.1,30);
+    house(60,0.1,30);
+    house(90,0.1,30);
+
+    house(90,0.1,-120);
+    house_side(60,0.1,-120);
+    house_side(90,0.1,-150);
 
 
 }
