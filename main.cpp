@@ -408,15 +408,15 @@ void house_side(float x,float y,float z)
 	glVertex3f(x-30,y+3.5*3,z+15+1.69*3);
 	glEnd();
 
-/*
+
 	glColor3f(0.51,0.015,0.008);
 	glBegin(GL_POLYGON);
-	glVertex3f(z,y+3.5*3,x-6.69*3);
-	glVertex3f(z-20,y+3.5*3,x-6.69*3);
-	glVertex3f(z-20,y+7.5*3,x-1*3);
-	glVertex3f(z,y+7.5*3,x-1*3);
+	glVertex3f(x,y+3.5*3,z-1.69*3);
+	glVertex3f(x,y+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+7.5*3,z+15-2.5*3);
+	glVertex3f(x-30,y+3.5*3,z-1.69*3);
 	glEnd();
-
+/*
     //atap 2
 	glColor3f(0.51,0.015,0.008);
 	glBegin(GL_POLYGON);
